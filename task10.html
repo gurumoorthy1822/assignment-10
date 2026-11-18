@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  padding: 20px;
+  background-color: #f4f6f8;
+}
+  section {
+    background-color: #f6f5f2;
+    padding:15px ;
+    margin-bottom: auto;
+    border-radius:6px;
+    box-shadow: 0px 0px 1.0px;
+  }
+
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 150px); 
+  gap: 16px; 
+}
+
+.grid-item {
+  background-color: #9fafd1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  gap: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #85aeb8;
+  padding: 20px;
+}
+
+.main {
+  grid-area: main;
+  background-color: #956161;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+.card{
+  background-color: #2c3e50;
+  border: 2px solid royalblue;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow:o 2px 4px rgb(rgb(181, 164, 164) rgb(107, 154, 107) rgb(233, 233, 236) / alpha);
+}
+.card h3{
+  margin-bottom: 20px;
+  color: #063361;
+}
+.card p{
+  color: #dd5757;
+  line-height: 1.5;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(4fr, 1fr);
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  gap: 20px;
+}
+.gallery-item{
+ overflow: hidden;
+  border-radius: 10px;
+}
+.gallery-item-img{
+  width: 10%;
+  height: 10%;
+  object-fit: cover;
+  display: block;
+}
+.span-2-col{
+grid-column: span 2;
+}
+.span-2-row{
+  grid-row: span 2;
+}
+.dashboard{
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+  "sidebar topbar"
+  "sidebar mainbar";
+}
+.sidebar{
+  grid-area: sidebar;
+  background-color: aqua;
+  color: black;
+  padding: 20px;
+}
+.sidebar h2{
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+.sidebar ul{
+list-style: none;
+}
+.sidebar li{
+  padding: 12px 0;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  color: #ffffff;
+}
+.topbar {
+  grid-area: topbar;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.main-content {
+  grid-area: main;
+  padding: 24px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 24px;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.widget {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.widget h4 {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+  </style>
+</head>
+<body>
+
+<h1>Task.1</h1>
+
+  <section>
+  <div class="grid-container">
+  <div class="grid-item">RCB</div>
+  <div class="grid-item">CSK</div>
+  <div class="grid-item">MI</div>
+  <div class="grid-item">SRH</div>
+  <div class="grid-item">KKR</div>
+  <div class="grid-item">GT</div>
+  </div>
+  </section>
+
+<h1>Task.2</h1>
+
+  <section>
+    <div class="container">
+    <header class="header">Header</header>
+    <aside class="sidebar">Sidebar</aside>
+    <main class="main">Main Content</main>
+    <footer class="footer">Footer</footer>
+    </div>
+  </section>
+   <h1>Task.3</h1>
+  <section>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Card 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur omnis suscipit recusandae dolor porro aliquam illum, commodi ipsam, temporibus aperiam vitae repudiandae adipisci distinctio quibusdam dolorem sed id consectetur placeat.</p>
+        </div>
+        <div class="card">
+          <h3>Card 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid libero architecto dolorem expedita reprehenderit? Delectus totam voluptate odio officia eaque, necessitatibus architecto explicabo temporibus vel quam reprehenderit ad deserunt.</p>
+        </div>
+        <div class="card">
+          <h3>Card 3</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima velit ipsum voluptates, amet rerum culpa ullam eos consequuntur voluptate cumque! Officiis asperiores doloremque dolore labore! Beatae quisquam perspiciatis optio neque.</p>
+        </div>
+      </div>
+  </section>
+   
+    <h1>Task.4</h1>
+
+    <section>
+      <div class="gallery">
+        <div class="gallery-item span-2-col span-2-row">
+          <img src="pexels-76905988-8698110.jpg" alt="R15">
+        </div>
+        <div class="gallery-item span-2-row">
+         <img src="pexels-abhinav-8532497.jpg" alt="MT">
+        </div>
+        <div class="span-2-col">
+          <img src="pexels-jisso-heby-597210750-17394010.jpg" alt="KTM">
+        </div>
+        <div class="gallery-item span-2-col">
+          <img src="pexels-deepak-kp-432261610-31544636.jpg" alt="RC">
+        </div>
+      </div>
+    </section>
+     
+    <h1>Task.5</h1>
+
+    <div class="dashboard">
+    <aside class="sidebar">
+      <h2>AdminPanel</h2>
+      <nav>
+        <ul>
+          <li>Overview</li>
+          <li>Analytics</li>
+          <li>Users</li>
+          <li>Settings</li>
+        </ul>
+      </nav>
+    </aside>
+    <header class="topbar">
+      <span>Dashboard Overview</span>
+      <div class="user-profile">Admin User</div>
+    </header>
+    <main class="main-content">
+      <section class="stats-grid">
+        <div class="widget">
+          <h4>Total Users</h4>
+          <p class="stat-value">14,820</p>
+        </div>
+        <div class="widget">
+          <h4>Revenue</h4>
+          <p class="stat-value">$48,290</p>
+        </div>
+        <div class="widget">
+          <h4>Active Sessions</h4>
+          <p class="stat-value">1,245</p>
+        </div>
+        <div class="widget">
+          <h4>Conversion Rate</h4>
+          <p class="stat-value">3.8%</p>
+        </div>
+      </section>
+
+      <section class="charts-grid">
+        <div class="panel">Traffic Analytics</div>
+        <div class="panel">Recent Activity</div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
